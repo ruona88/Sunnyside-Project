@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Variables and mixins for the project*/
+$border: thin solid black;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    font-size: 18px;
+}
+
+.first-div {
+    background-image: url("Images/Desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.first-div header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    color: white;
+    margin-bottom: 15vh;
+    font-family: 'Barlow', sans-serif;
+}
+
+.first-div header {
+    font-weight: 1000;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.first-div header ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    li {
+        font-size: 0.8rem;
+        list-style-type: none;
+        display: block;
+        margin-left: 4rem;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .contact {
+        font-family: 'Barlow', sans-serif;
+        padding: 0.5rem 1.5rem;
+        color: black;
+        background-color: white;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        transition-property: background-color;
+        transition-duration: 0.4s;
+
+        a {
+            color: black;
+            transition-property: color;
+            transition-duration: 0.6s;
+        }
+
+        &:hover {
+            background-color: hsla(198, 62%, 26%, 0.08);
+
+            a {
+                color: white;
+            }
+        } 
+    }
+}
+
+.hamburger {
+    display: none;
+
+    span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: seashell;
+    }
+}
+
+.our-claim {
+    text-align: center;
+    color: white;
+    word-spacing: 0.7rem;
+    letter-spacing: 0.3rem;
+    font-size: 3vw;
+    font-family: 'Fraunces', serif;
+}
+
+/*Styling for the second section*/
+.second-div {
+    display: flex;
+}
+
+.div-info {
+    padding: 8rem 6rem;
+
+    h2 {
+        color: hsl(213, 9%, 39%);
+        font-size: 2.5rem;
+        margin-bottom: 5vh;
+    }
+
+    p {
+        opacity: 0.9;
+        margin-bottom: 4vh;
+    }
+
+    p a {
+        text-decoration: none;
+        position: relative;
+        color: black;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;     
+        transition-property: border-bottom;
+        transition-duration: 0.3s;    
+        transition-timing-function: ease-in-out;   
+
+        &:hover {
+            border-bottom: 4px solid hsl(51, 100%, 49%);
+        }
+    }
+
+}
+
+.transform-image, 
+.standout-image {
+    width: 49.4vw;
+    height: 100%;
+}
+
+/*Styling for the third section, the other content of the DIV get their styling from the previous div's styling*/
+.third-div {
+    display: flex;
+    flex-direction: row-reverse;
+
+    #third-div-link:hover {
+        border-bottom: 4px solid hsl(7, 99%, 70%);
+    }
+}
+
+/*Stylinf fo rthe fourth div*/
+.fourth-div {
+    height: 40vw;
+    display: flex;
+}
+
+.div-one {
+    width: 49.5vw;
+    text-align: center;
+    padding-top: 25%;
+    padding-left: 6%;
+    padding-right: 6%;
+    background-image: url("Images/Desktop/image-graphic-design.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(167, 40%, 24%);
+
+
+    h2 {
+        font-size: 2rem;
+        font-family: 'Fraunces', serif;
+        margin-bottom: 5%;
+    }
+}
+
+.div-two {
+    width: 50%;
+    width: 50%;
+    text-align: center;
+    padding-top: 25%;
+    padding-left: 6%;
+    padding-right: 6%;
+    background-image: url("Images/Desktop/image-photography.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: hsl(198, 62%, 26%);
+
+    h2 {
+        font-size: 2rem;
+        font-family: 'Fraunces', serif;
+        margin-bottom: 5%;
+    }
+}
+
+/*Styling for the fifth div - the testimonials*/
+.fifth-div {
+    height: 100vh;
+    padding-top: 14vh;
+
+    .hearder-text {
+        text-align: center;
+        word-spacing: 0.8rem;
+        letter-spacing: 0.2rem;
+        color: hsl(213, 9%, 39%);
+        margin-bottom: 10vh;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+    }
+}
+
+.comments-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 8%;
+}
+
+/*Styling for the testimonials*/
+.client-figure {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-bottom: 7vh;
+}
+
+.comments {
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 5vh;
+}
+
+.user {
+    text-align: center;
+}
+
+.username {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    margin-bottom: 3vh;
+}
+
+.userjob {
+   color: hsl(213, 9%, 39%);
+   font-family: 'Barlow', sans-serif;
+   font-size: 0.8rem;
+}
+
+/*Set left and right margins for */
+.Thomas {
+    margin: 0% 3%;
+}
+
+/*Styling for the sixth-div*/
+.sixth-div figure {
+    display: flex;
+
+    .the-image {
+        width: 25%;
+    }
+}
+
+/*Styling for the seventh div*/
+.seventh-div {
+    text-align: center;
+    background-color: hsla(232, 10%, 55%, 0.6);
+    padding-top: 10vh;
+
+    p { 
+        font-family: 'Fraunces', serif;
+        font-size: 2rem;
+        font-weight: 1000;
+        color: hsl(213, 9%, 39%);
+        margin-bottom: 6vh;
+    }
+
+    .items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            list-style-type: none;
+            font-family: 'Barlow', sans-serif;
+            cursor: pointer;
+            margin-bottom: 8vh;
+            color:hsl(167, 40%, 24%);
+
+            &:nth-of-type(2) {
+                margin-left: 4%;
+                margin-right: 4%;
+            }
+
+            &:hover {
+                color: seashell;
+            }
+        }
+    }
+
+    figure {
+        padding-bottom: 7vh;
+
+        .socialmedia {
+            margin-right: 2%;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(100);
+            }
+        }
+    }
+}
