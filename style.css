@@ -40,15 +40,15 @@ html {
 
 .first-div header ul {
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 
 .first-div header ul li {
   font-size: 0.8rem;
   list-style-type: none;
   display: block;
-  margin-left: 4rem;
+  margin-right: 2rem;
   cursor: pointer;
 }
 
@@ -100,7 +100,7 @@ html {
   color: white;
   word-spacing: 0.7rem;
   letter-spacing: 0.3rem;
-  font-size: 3vw;
+  font-size: 2.3rem;
   font-family: 'Fraunces', serif;
 }
 
@@ -111,6 +111,7 @@ html {
 
 .div-info {
   padding: 8rem 6rem;
+  width: 50%;
 }
 
 .div-info h2 {
@@ -139,10 +140,11 @@ html {
   border-bottom: 4px solid #fad400;
 }
 
-.transform-image,
-.standout-image {
-  width: 49.4vw;
-  height: 100%;
+.image-transform {
+  width: 50%;
+  background-image: url("Images/Desktop/Image-transform.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*Styling for the third section, the other content of the DIV get their styling from the previous div's styling*/
@@ -155,7 +157,14 @@ html {
   border-bottom: 4px solid #fe7867;
 }
 
-/*Stylinf fo rthe fourth div*/
+.image-standout {
+  background-image: url("Images/Desktop/image-stand-out.jpg");
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*Styling fo the fourth div*/
 .fourth-div {
   height: 40vw;
   display: flex;
@@ -259,12 +268,36 @@ html {
 }
 
 /*Styling for the sixth-div*/
-.sixth-div figure {
+.images-container {
   display: flex;
 }
 
-.sixth-div figure .the-image {
+.images-container .image-one {
   width: 25%;
+  height: 70vh;
+  background-image: url("Images/Desktop/image-gallery-milkbottles.jpg");
+  background-size: cover;
+}
+
+.images-container .image-two {
+  width: 25%;
+  height: 70vh;
+  background-image: url("Images/Desktop/image-gallery-orange.jpg");
+  background-size: cover;
+}
+
+.images-container .image-three {
+  width: 25%;
+  height: 70vh;
+  background-image: url("Images/Desktop/image-gallery-cone.jpg");
+  background-size: cover;
+}
+
+.images-container .image-four {
+  width: 25%;
+  height: 70vh;
+  background-image: url("Images/Desktop/image-gallery-sugarcubes.jpg");
+  background-size: cover;
 }
 
 /*Styling for the seventh div*/
