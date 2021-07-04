@@ -115,6 +115,52 @@ html {
     font-family: 'Fraunces', serif;
 }
 
+@keyframes arrow {
+    0% {top: 100px;}
+    100% {top: 180px;}
+}
+
+.first-div .arrow {
+    width: 124px;
+    height: 5px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    transform: rotate(90deg);
+    background-color: white;
+    animation-name: arrow;
+    animation-fill-mode: none;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+
+    &::before {
+        content: "";
+        width: 30px;
+        height: 5px;
+        margin: auto;
+        display: block;
+        position: absolute;
+        background-color: white;
+        left: 103px;
+        top: 10px;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        content: "";
+        width: 30px;
+        height: 5px;
+        margin: auto;
+        display: block;
+        position: absolute;
+        background-color: white;
+        left: 103px;
+        top: -10px;
+        transform: rotate(45deg);
+    }
+
+}
+
 /*Styling for the second section*/
 .second-div {
     display: flex;
@@ -366,3 +412,228 @@ html {
     }
 }
 
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 23px;
+    }
+
+    /*Styling for the navigation*/
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active {
+        span:nth-child(2) {
+            display: none;
+        }
+
+        span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg) translateX(5px) translateY(-6px);
+        }
+    }
+
+    .first-div header ul {
+        position: fixed;
+        top: 3rem;
+        width: 94%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 3.5rem 0rem 0.7rem 0rem;
+        background-color: white;
+        left: -100%;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        z-index: 1;
+        clip-path: polygon(93% 13%, 100% 0, 100% 13%, 100% 100%, 0 100%, 0 14%);
+        
+        li {
+            margin-left: 3rem;
+            display: block;
+            margin-bottom: 1.5rem;
+            
+            a {
+                color: hsl(212, 27%, 19%);
+                font-size: 1.3rem;
+            }
+        }
+
+        .contact {
+            background-color: yellow;
+            border-radius: 20px;
+
+            &:hover {
+                transform: scaleX(1.2);
+                background-color: yellow;
+            }
+        } 
+    }
+
+    .first-div header ul.active {
+        left: 3%;
+    }
+
+    
+    /*Styling for the first-div*/
+    .first-div {
+        background-image: url("Images/Mobile/image-header.jpg");
+    }
+
+    /*Styling for the second-iv*/
+    .second-div {
+        flex-direction: column-reverse;
+        text-align: center;
+        
+        .div-info {
+            width: 100%;
+        }
+        
+        .image-transform {
+            width: 100%;
+            height: 60vh;
+            background-image: url("Images/Mobile/image-transform.jpg");
+        }
+    }
+
+    /*Styling for the third-div*/
+    .third-div {
+        flex-direction: column-reverse;
+        text-align: center;
+        
+        .div-info {
+            width: 100%;
+        }
+        
+        .image-standout {
+            width: 100%;
+            height: 60vh;
+            background-image: url("Images/Mobile/image-stand-out.jpg");
+        }
+    }
+
+    /*Styling for the fourth div*/
+    .fourth-div {
+        flex-direction: column;
+        height: 180vh;
+
+        .div-one {
+            width: 100%;
+            height: 50%;
+            padding-top: 90%;
+            background-image: url("Images/Mobile/image-graphic-design.jpg");
+        }
+
+        .div-two {
+            width: 100%;
+            height: 50%;
+            padding-top: 90%;
+            background-image: url("Images/Mobile/image-photography.jpg");
+        }
+    }
+
+    .images-container {
+        display: grid;
+        height: 70vh;
+        width: 100%;
+        grid-template-rows: repeat(1fr 1fr);
+        grid-template-columns: repeat(1fr 1fr);
+
+        .image-one {
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+            background-image: url("Images/Mobile/image-gallery-milkbottles.jpg");
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-two {
+            grid-row: 1 / span 1;
+            grid-column: 2 / span 1;
+            background-image: url("Images/Mobile/image-gallery-orange.jpg");
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-three {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 1;
+            background-image: url("Images/Mobile/image-gallery-cone.jpg");
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-four {
+            grid-row: 2 / span 1;
+            grid-column: 2 / span 1;
+            background-image: url("Images/Mobile/image-gallery-sugar-cubes.jpg");
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    html {
+        font-size: 18px;
+    }
+
+    .second-div .div-info,
+    .third-div .div-info {
+        padding: 2rem 2.9rem;;
+    }
+
+    .fifth-div {
+        margin-bottom: 7vh;
+        height: 180vh;
+
+        .comments-box {
+            width: 100%;
+            flex-direction: column;
+
+            .user {
+                margin-bottom: 7vh;
+            }
+        }
+    }
+
+    .images-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr);
+        height: 120vh;
+
+        .image-one {
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        .image-two {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        .image-three {
+            grid-row: 3 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        .image-four {
+            grid-row: 4 / span 1;
+            grid-column: 1 / span 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 13px;
+    }
+}
